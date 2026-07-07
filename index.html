@@ -4,26 +4,57 @@
 </head>
 <body>
 <header>
-  <h1>My Personal Site</h1>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-  </nav>
+  <h1>Daniel's Website: a Personal Portfolio</h1>
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'About')"id="defaultOpen">About</button>
+    <button class="tablinks" onclick="openCity(event, 'Projects')">Projects</button>
+    <button class="tablinks" onclick="openCity(event, 'Roadmap')">Roadmap</button>
+  </div>
 </header>
-<section id="about">
-  <div class="content">
+  <div id="About" class="tabcontent">
   <h2>About Me</h2>
   <p>I'm Daniel, a passionate web developer, whose moral duty it is to create innovative and user-friendly web applications.</p>
   <p>I will continue to push the boundaries of what's possible on the web.</p>
-  </div>
-</section>
-<br>
-<section id="projects">
-  <div class="content">
+  <p>My goal is to create web applications that are not only functional but also visually appealing and accessible to all users.</p>
+  <p>In my free time, I enjoy exploring new technologies, contributing to open-source projects, and sharing my knowledge with the developer community.</p>
+  <p>Right now, I'm working on learning more about web development and improving my skills, with the stardance hackclub program.</p>
+  <p>Feel free to reach out to me if you have any questions or if you'd like to collaborate on a project!</p><br>
+  <p>Contact me at: <a href="mailto:bossofbarley@gmail.com">bossofbarley@gmail.com</a></p>
+</div>
+
+<div id="Projects" class="tabcontent">
   <h2>Projects</h2>
-  <p>Right now, there isn't a lot to show, but I'm working on some exciting things!</p>
-  </div>
-</section>
+  <p>Here are some of the projects I've worked on:</p>
+  <p>1. This website: a personal portfolio to showcase my skills and projects.</p><br>
+  <p>2. ...</p>
+  <br> <br>
+  <p>Right now, there isn't a lot more to show, but I'm working on some exciting things!</p>
+</div>
+
+<div id="Roadmap" class="tabcontent">
+<h2>Roadmap</h2>
+  <p>My roadmap is to continue learning and growing as a web developer, and to create innovative and user-friendly web applications that make a positive impact on the world.</p>
+  <p>In the future, I hope to work on projects that bring out my creativity and passion for development.</p>
+  <p>As of right now, I'm focused on the current </p>
+</div>
 </body>
 </html>
+<script>
+  document.getElementById("defaultOpen").click();
+  function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
 
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
